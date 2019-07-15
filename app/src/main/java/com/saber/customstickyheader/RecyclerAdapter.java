@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.saber.stickyheader.stickyView.StickHeaderRecyclerView;
 
 public class RecyclerAdapter extends StickHeaderRecyclerView<CustomerData, HeaderDataImpl> {
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,15 +43,15 @@ public class RecyclerAdapter extends StickHeaderRecyclerView<CustomerData, Heade
     }
 
     class HeaderViewHolder extends RecyclerView.ViewHolder {
-        TextView tvHeader;
+//        TextView tvHeader;
 
         HeaderViewHolder(View itemView) {
             super(itemView);
-            tvHeader = itemView.findViewById(R.id.tvHeader);
+//            tvHeader = itemView.findViewById(R.id.tvHeader);
         }
 
         void bindData(int position) {
-            tvHeader.setText(String.valueOf(position / 5));
+//            tvHeader.setText(String.valueOf(position / 5));
         }
     }
 
@@ -79,9 +78,25 @@ public class RecyclerAdapter extends StickHeaderRecyclerView<CustomerData, Heade
         }
 
         void bindData(int position) {
-            getDataInPosition(position).getFelan();
-            tvRows.setText("saber" + position);
+            tvRows.setText(getDataInPosition(position).getLabel());
             ((ViewGroup) tvRows.getParent()).setBackgroundColor(Color.parseColor("#ffffff"));
         }
+    }
+    public int getSpanSizeFromPosition(int position) {
+        int viewType = getItemViewType(position);
+        int spanValue;
+        switch (viewType) {
+            case HeaderDataImpl.HEADER_TYPE_1:
+                spanValue = 4;
+                break;
+            case HeaderDataImpl.HEADER_TYPE_2:
+                spanValue = 4;
+                break;
+            default:
+                // todo: 根据文字长度计算span count.
+                spanValue = 1;
+                break;
+        }
+        return spanValue;
     }
 }

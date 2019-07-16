@@ -56,15 +56,15 @@ public class RecyclerAdapter extends StickHeaderRecyclerView<CustomerData, Heade
     }
 
     class Header2ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvHeader;
+        //TextView tvHeader;
 
         Header2ViewHolder(View itemView) {
             super(itemView);
-            tvHeader = itemView.findViewById(R.id.tvHeader);
+            //tvHeader = itemView.findViewById(R.id.tvHeader);
         }
 
         void bindData(int position) {
-            tvHeader.setText(String.valueOf(position / 5));
+            //tvHeader.setText(String.valueOf(position / 5));
         }
     }
 

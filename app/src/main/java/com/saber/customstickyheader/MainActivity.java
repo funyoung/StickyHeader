@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 return adapter.getSpanSizeFromPosition(position);
             }
         });
+
+        manager.scrollToPositionWithOffset(1, 0);
     }
 
     @Override

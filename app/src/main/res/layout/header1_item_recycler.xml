@@ -9,11 +9,10 @@
     >
 
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="code list"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/code_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_small"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8"
@@ -23,7 +22,8 @@
     <TextView
         android:id="@+id/button8"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/header_height_large"
+        android:gravity="center"
         android:text="bb3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +33,8 @@
     <TextView
         android:id="@+id/button9"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/header_height_large"
+        android:gravity="center"
         android:text="bb2"
         app:layout_constraintRight_toLeftOf="@+id/button10"
         app:layout_constraintLeft_toRightOf="@+id/button8"
@@ -42,7 +43,8 @@
     <TextView
         android:id="@+id/button10"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/header_height_large"
+        android:gravity="center"
         android:text="bb1"
         app:layout_constraintRight_toLeftOf="@+id/button11"
         app:layout_constraintLeft_toRightOf="@+id/button9"
@@ -52,7 +54,8 @@
     <TextView
         android:id="@+id/button11"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/header_height_large"
+        android:gravity="center"
         android:text="bb0"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/button10"

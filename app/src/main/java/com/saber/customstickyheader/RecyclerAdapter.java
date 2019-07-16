@@ -44,10 +44,13 @@ public class RecyclerAdapter extends StickHeaderRecyclerView<CustomerData, Heade
 
     class HeaderViewHolder extends RecyclerView.ViewHolder {
 //        TextView tvHeader;
+        private RecyclerView codeView;
 
         HeaderViewHolder(View itemView) {
             super(itemView);
 //            tvHeader = itemView.findViewById(R.id.tvHeader);
+            codeView = itemView.findViewById(R.id.code_view);
+            RecyclerUtils.initInner(codeView);
         }
 
         void bindData(int position) {
